@@ -189,8 +189,7 @@ Like other Go packages, you can also use the `go get` tool: `go get -u github.co
 
 If you need any help with this, please [join our Discord server](https://discord.gg/nf88NJu).
 
-
-Deej on Bazzite — Install Guide
+### Deej on Bazzite — Install Guide
 
 Complete steps for building and running Deej (hardware volume mixer) on Bazzite, since it's not officially packaged for immutable Fedora-based distros.
 
@@ -301,7 +300,6 @@ Arduino not detected / permission denied on serial port Confirm dialout group me
 Sliders stop responding ~10 seconds after login, but work fine when run manually This is a startup timing issue — the audio system or container isn't ready yet when Deej connects. Increase the sleep delay in the autostart entry (Step 8) if 20 seconds isn't enough on your machine.
 
 distrobox-export --bin fails with "cannot find" the binary The build didn't actually succeed — check for errors in go build output before trying to export.
-
 
 ## Community
 
