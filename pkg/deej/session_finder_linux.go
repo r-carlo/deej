@@ -132,11 +132,17 @@ func (sf *paSessionFinder) enumerateAndAddSessions(sessions *[]Session) error {
 		name, ok := info.Properties["application.process.binary"]
 
 		if !ok {
+    		// fall back to application.name for sandboxed apps (e.g. Flatpak)
+	        // that don't expose application.process.binary
+    	    	        name, ok = info.Properties["application.name"]
+
+		if !ok {
 			sf.logger.Warnw("Failed to get sink input's process name",
 				"sinkInputIndex", info.SinkInputIndex)
 
 			continue
 		}
+	}
 
 		// create the deej session object
 		newSession := newPASession(sf.sessionLogger, sf.client, info.SinkInputIndex, info.Channels, name.String())
