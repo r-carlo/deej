@@ -50,7 +50,7 @@ This creates a wrapper script at `~/.local/bin/deej` on the host that transparen
 
 ```bash
 cd ~/.local/bin
-wget https://raw.githubusercontent.com/omriharel/deej/master/config.yaml
+wget https://raw.githubusercontent.com/r-carlo/deej/master/config.yaml
 nano config.yaml
 ```
 
