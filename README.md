@@ -28,7 +28,7 @@ sudo dnf install golang gtk3-devel libappindicator-gtk3-devel webkit2gtk4.0-deve
 ## 3. Clone and build Deej
 
 ```bash
-git clone https://github.com/omriharel/deej.git
+git clone https://github.com/r-carlo/deej.git
 cd deej
 go build -o deej ./pkg/deej/cmd/main.go
 
